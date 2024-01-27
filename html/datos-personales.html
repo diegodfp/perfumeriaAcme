@@ -7,14 +7,44 @@
 </head>
 <body>
     <h1> Datos personales ACME</h1>
-    <form action="">
-        <label for="">Nombres <input type="text"> </label>
-        <label for="">Nacionalidad<input type="text" name="" id=""></label>
-        <label for=""> Direccion<input type="text"></label>
-        <label for="">sexo <input type="text"> </label>
-        <label for="">Pais de residencia<input type="text" name="" id=""></label>
-        <label for=""> Ciudad de Residencia<input type="text"></label>
-        
+    <form action="/procesar_formulario" method="post">
+        <label for="nombres">Nombres:</label>
+        <input type="text" id="nombres" name="nombres" required><br>
+    
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required><br>
+    
+        <label for="nacionalidad">Nacionalidad:</label>
+        <input type="text" id="nacionalidad" name="nacionalidad" required><br>
+    
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+            <option value="otro">Otro</option>
+            <option value="no-informo">No informo</option>
+        </select><br>
+    
+        <label for="pais_residencia">País de Residencia:</label>
+        <select id="pais_residencia" name="pais_residencia" required>
+            <!-- Aquí puedes agregar opciones para todos los países de América -->
+            <option value="argentina">Argentina</option>
+            <option value="brasil">Brasil</option>
+            <!-- Agrega más países según sea necesario -->
+        </select><br>
+    
+        <label for="ciudad_residencia">Ciudad de Residencia:</label>
+        <select id="ciudad_residencia" name="ciudad_residencia" required>
+            <!-- Aquí puedes agregar opciones para todos los municipios de Colombia -->
+            <option value="bogota">Bogotá</option>
+            <option value="medellin">Medellín</option>
+            <!-- Agrega más municipios según sea necesario -->
+        </select><br>
+    
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br>
+    
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>
